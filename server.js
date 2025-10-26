@@ -18,7 +18,7 @@ app.post("/send-code", async (req, res) => {
   try {
     // Send the email using Resend API
     await resend.emails.send({
-      from: "Employee Verification <no-reply@resend.dev>", // you can customize this
+      from: "shudufhadzo118@gmail.com", // you can customize this
       to: email,
       subject: "Your Verification Code",
       text: `Your verification code is: ${code}`,
@@ -33,4 +33,5 @@ app.post("/send-code", async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
+
 app.listen(PORT, () => console.log(` Server running on port ${PORT}`));
